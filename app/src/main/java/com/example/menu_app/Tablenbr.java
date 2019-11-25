@@ -37,8 +37,7 @@ public class Tablenbr extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         if (v==StartOrder){
             addNbr();
-            Intent intent=new Intent(this,MainActivity.class);
-            startActivity(intent);
+
         }
     }
     private void addNbr(){
@@ -48,6 +47,8 @@ public class Tablenbr extends AppCompatActivity implements View.OnClickListener 
             tableNumber tableNumber=new tableNumber(number,id);
             databaseReference.child(id).setValue(tableNumber);
             Toast.makeText(this,"Table Added",Toast.LENGTH_LONG).show();
+            Intent intent=new Intent(this,MainActivity.class);
+            startActivity(intent);
         }else {
             Toast.makeText(this,"you should enter the table's name",Toast.LENGTH_LONG).show();
         }
