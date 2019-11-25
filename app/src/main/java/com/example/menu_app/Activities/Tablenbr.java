@@ -1,4 +1,4 @@
-package com.example.menu_app;
+package com.example.menu_app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.menu_app.Activities.MainActivity;
+import com.example.menu_app.R;
 import com.example.menu_app.models.tableNumber;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
@@ -47,7 +49,7 @@ public class Tablenbr extends AppCompatActivity implements View.OnClickListener 
             tableNumber tableNumber=new tableNumber(number,id);
             databaseReference.child(id).setValue(tableNumber);
             Toast.makeText(this,"Table Added",Toast.LENGTH_LONG).show();
-            Intent intent=new Intent(this,MainActivity.class);
+            Intent intent=new Intent(this, Menulist.class);
             startActivity(intent);
         }else {
             Toast.makeText(this,"you should enter the table's name",Toast.LENGTH_LONG).show();
