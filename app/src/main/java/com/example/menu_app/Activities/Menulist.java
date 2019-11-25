@@ -35,27 +35,27 @@ public class Menulist extends AppCompatActivity {
         Log.d(TAG, "initImageBitmaps: preparing images");
 
         Imageurls.add("https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-        Names.add("Chicken Masala");
+        Names.add(" Apple Pie");
         Money.add("2000");
 
         Imageurls.add("https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=653&q=80");
-        Names.add("Rice");
+        Names.add("Clam Chowder");
         Money.add("3000");
 
         Imageurls.add("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-        Names.add("Chicken Masala");
+        Names.add(" Bagel and Lox");
         Money.add("9000");
 
         Imageurls.add("https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-        Names.add("Chicken Masala");
+        Names.add("Deep-Dish Pizza");
         Money.add("6000");
 
         Imageurls.add("https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-        Names.add("Chicken Masala");
+        Names.add(" Sausage Gravy");
         Money.add("4000");
 
         Imageurls.add("https://images.unsplash.com/photo-1547595628-c61a29f496f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-        Names.add("Chicken Masala");
+        Names.add("Texas Barbecue");
         Money.add("7000");
 
         Imageurls.add("https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
@@ -91,7 +91,7 @@ public class Menulist extends AppCompatActivity {
         Money.add("2000");
 
         Imageurls.add("https://images.unsplash.com/photo-1549611016-3a70d82b5040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-        Names.add("hamburger");
+        Names.add("The Hamburger");
         Money.add("1500");
 
         Imageurls.add("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
