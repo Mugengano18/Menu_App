@@ -1,5 +1,6 @@
 package com.example.menu_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pass = password.getText().toString();
 
 //                if(mail.equals("kts@gmail.com") && pass.equals("123456")){
-//                    startActivity(new Intent(LoginActivity.this, WaiterActivity.class));
+//                    startActivity(new Intent(LoginActivity.this, CurrentItemActivity.class));
 //                    finish();
 //                }
 
@@ -62,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             Toast.makeText(LoginActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, CurrentItemActivity.class));
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Authentication failed! Please try again!", Toast.LENGTH_SHORT).show();
                             }
