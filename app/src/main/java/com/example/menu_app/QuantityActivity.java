@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class QuantityActivity extends AppCompatActivity {
 
     int quantity = 0;
+    int price = 0;
     private Button add;
 
     @Override
@@ -34,15 +35,29 @@ public class QuantityActivity extends AppCompatActivity {
         quantityText.setText("" + number);
     }
 
+    private void displayPrice(int price) {
+        TextView priceText = (TextView) findViewById(R.id.price);
+        priceText.setText("Frw " + price);
+    }
+
     public void decrement(View view) {
         if (quantity>0) {
             quantity = quantity - 1;
             display(quantity);
         }
+        price = calculatePrice();
+        displayPrice(price);
     }
 
     public void increment(View view) {
         quantity = quantity + 1;
         display(quantity);
+        price = calculatePrice();
+        displayPrice(price);
+    }
+
+    private int calculatePrice() {
+        price = quantity * 3000;
+        return price;
     }
 }
