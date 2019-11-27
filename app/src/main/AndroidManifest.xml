@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Menulist"></activity>
+        <activity android:name=".Activities.anotherActivity"></activity>
+        <activity android:name=".Activities.Menulist">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.menu_app.Activities.Tablenbr" />
+        </activity>
         <activity android:name=".Activities.Tablenbr">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.menu_app.Activities.Tablenbr" />
-        </activity>
+        <activity android:name=".Activities.MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
