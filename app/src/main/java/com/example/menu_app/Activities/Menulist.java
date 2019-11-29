@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,8 @@ import android.view.MenuItem;
 import com.example.menu_app.R;
 import com.example.menu_app.adapter.Myadapter;
 import com.example.menu_app.models.Model;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,6 +32,8 @@ public class Menulist extends AppCompatActivity {
     RecyclerView recyclerView;
     Myadapter myadapter;
     SharedPreferences preferences;
+    private FirebaseAuth Auth;
+    private FirebaseAuth.AuthStateListener AuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +43,37 @@ public class Menulist extends AppCompatActivity {
         preferences=this.getSharedPreferences("Preference",MODE_PRIVATE);
         getMyList();
 
+        Auth=FirebaseAuth.getInstance();
+        AuthListener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser client=firebaseAuth.getCurrentUser();
+                if(client != null){
+                    getSupportActionBar().setTitle(client.getDisplayName());
+                }
+            }
+        };
+
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        Auth.addAuthStateListener(AuthListener);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        if(AuthListener != null){
+            Auth.removeAuthStateListener(AuthListener);
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater =getMenuInflater();
         menuInflater.inflate(R.menu.menu,menu);
+        menuInflater.inflate(R.menu.logout,menu);
         MenuItem item=menu.findItem(R.id.search);
         SearchView searchView=(SearchView) MenuItemCompat.getActionView(item);
 
@@ -68,6 +99,9 @@ public class Menulist extends AppCompatActivity {
         int id=item.getItemId();
         if (id==R.id.sorting){
             sortDialog();
+            return true;
+        }else if (id == R.id.logout) {
+            logout();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -99,6 +133,14 @@ public class Menulist extends AppCompatActivity {
         });
 
         builder.create().show();
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(Menulist.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
 
