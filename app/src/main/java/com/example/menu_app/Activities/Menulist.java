@@ -224,8 +224,7 @@ public class Menulist extends AppCompatActivity {
             Collections.sort(models,Model.By_Menu_Descending);
         }
 
-        Intent intent2=new Intent(Menulist.this,anotherActivity.class);
-        intent2.putExtra("id",id);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         myadapter=new Myadapter(this,models);
         recyclerView.setAdapter(myadapter);
