@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/jus">
+<!--    tools:context=".Activities.LoginActivity"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="187dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pizza3" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:hint="  Name"
+
+                android:drawableLeft="@drawable/ic_person"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:hint="   Phone number"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/writeCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/ic_code"
+                android:padding="10dp"
+                android:hint="Enter code" />
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/headerView"-->
+            <!--                android:layout_width="202dp"-->
+            <!--                android:layout_height="140dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <View-->
+            <!--                    android:layout_width="315dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:alpha="0.6"-->
+            <!--                    android:background="@color/colorPrimary" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/getCode"-->
+            <!--                    android:layout_width="191dp"-->
+            <!--                    android:layout_height="30dp"-->
+            <!--                    android:layout_marginLeft="16dp"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:layout_marginRight="16dp"-->
+            <!--                    android:alpha="1"-->
+            <!--                    android:background="@color/colorPrimary"-->
+            <!--                    android:text="GEt V.code"-->
+            <!--                    android:textColor="@android:color/white"-->
+            <!--                    android:textStyle="bold" />-->
+
+            <!--                <androidx.cardview.widget.CardView-->
+            <!--                    android:id="@+id/cardSearch"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@id/getCode"-->
+            <!--                    android:layout_marginLeft="16dp"-->
+            <!--                    android:layout_marginTop="15dp"-->
+            <!--                    android:layout_marginRight="16dp"-->
+            <!--                    app:cardBackgroundColor="@color/colorPrimary"-->
+            <!--                    app:cardCornerRadius="10dp"-->
+            <!--                    app:cardElevation="0dp">-->
+
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/writeCode"-->
+            <!--                        android:layout_width="176dp"-->
+            <!--                        android:layout_height="56dp"-->
+            <!--                        android:background="@drawable/code_bg"-->
+            <!--                        android:digits="0123456789"-->
+            <!--                        android:drawablePadding="8dp"-->
+            <!--                        android:gravity="center_vertical"-->
+            <!--                        android:padding="10dp"-->
+            <!--                        android:text="Enter code"-->
+            <!--                        android:textColor="@color/colorPrimaryLight" />-->
+
+            <!--                </androidx.cardview.widget.CardView>-->
+            <!--            </RelativeLayout>-->
+
+            <Button
+                android:id="@+id/LoginButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                app:fontFamily="@font/amita"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/roundbutton"/>
+
+            <TextView
+                android:id="@+id/getCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Get verification code !"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/amita" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
