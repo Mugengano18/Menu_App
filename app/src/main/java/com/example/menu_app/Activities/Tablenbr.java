@@ -50,6 +50,7 @@ public class Tablenbr extends AppCompatActivity implements View.OnClickListener 
             databaseReference.child(id).setValue(tableNumber);
             Toast.makeText(this,"Table Added",Toast.LENGTH_LONG).show();
             Intent intent=new Intent(this, Menulist.class);
+            intent.putExtra("table",number);
             startActivity(intent);
         }else {
             Toast.makeText(this,"you should enter the table's name",Toast.LENGTH_LONG).show();
