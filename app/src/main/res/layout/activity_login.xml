@@ -23,12 +23,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="187dp"
                 android:layout_gravity="center"
-                android:background="@drawable/pizza3"/>
+                android:background="@drawable/pizza3" />
 
             <EditText
                 android:id="@+id/email"
-                android:layout_width="289dp"
+                android:layout_width="258dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="50dp"
@@ -38,8 +39,9 @@
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="289dp"
+                android:layout_width="258dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="50dp"
