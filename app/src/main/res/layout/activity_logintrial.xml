@@ -35,7 +35,7 @@
                 android:padding="10dp"
                 android:hint="  Name"
 
-                android:drawableLeft="@drawable/ic_person"/>
+                android:drawableLeft="@drawable/ic_person_black_24dp"/>
 
             <EditText
                 android:id="@+id/phone"

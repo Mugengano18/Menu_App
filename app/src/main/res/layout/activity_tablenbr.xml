@@ -16,63 +16,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Welcome "
+        android:text="WELCOME"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
         android:textStyle="bold"
         app:fontFamily="@font/armata"/>
 
-                <RelativeLayout
-                    android:id="@+id/headerView"
-                    android:layout_width="202dp"
-                    android:layout_height="140dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:orientation="vertical">
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/headerView"-->
+<!--                    android:layout_width="202dp"-->
+<!--                    android:layout_height="140dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <View
-                        android:layout_width="315dp"
-                        android:layout_height="wrap_content"
-                        android:background="" />
+<!--                    <View-->
+<!--                        android:layout_width="315dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="" />-->
 
-                    <TextView
-                        android:id="@+id/getCode"
-                        android:layout_width="191dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="16dp"
-                        android:alpha="1"
-                        android:text="GEt V.code"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/getCode"-->
+<!--                        android:layout_width="191dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginRight="16dp"-->
+<!--                        android:alpha="1"-->
+<!--                        android:text="GEt V.code"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardSearch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/getCode"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="16dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="0dp">
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/cardSearch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/getCode"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:layout_marginRight="16dp"-->
+<!--                        app:cardBackgroundColor="@color/colorPrimary"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="0dp">-->
 
-                        <EditText
-                            android:id="@+id/writeCode"
-                            android:layout_width="176dp"
-                            android:layout_height="56dp"
-                            android:background="@drawable/roundbutton"
-                            android:digits="0123456789"
-                            android:drawablePadding="8dp"
-                            android:gravity="center_vertical"
-                            android:padding="10dp"
-                            android:text="Enter code"
-                            android:textColor="@color/colorPrimaryLight" />
+<!--                        <EditText-->
+<!--                            android:id="@+id/writeCode"-->
+<!--                            android:layout_width="176dp"-->
+<!--                            android:layout_height="56dp"-->
+<!--                            android:background="@drawable/roundbutton"-->
+<!--                            android:digits="0123456789"-->
+<!--                            android:drawablePadding="8dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:text="Enter code"-->
+<!--                            android:textColor="@color/colorPrimaryLight" />-->
 
-                    </androidx.cardview.widget.CardView>
-                </RelativeLayout>
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </RelativeLayout>-->
 
 
     <LinearLayout
