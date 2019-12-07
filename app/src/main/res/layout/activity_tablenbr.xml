@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jus"
+
+    tools:context=".Activities.Tablenbr">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="WELCOME"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:fontFamily="@font/armata"/>
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/headerView"-->
+<!--                    android:layout_width="202dp"-->
+<!--                    android:layout_height="140dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="315dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/getCode"-->
+<!--                        android:layout_width="191dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginRight="16dp"-->
+<!--                        android:alpha="1"-->
+<!--                        android:text="GEt V.code"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/cardSearch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/getCode"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:layout_marginRight="16dp"-->
+<!--                        app:cardBackgroundColor="@color/colorPrimary"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/writeCode"-->
+<!--                            android:layout_width="176dp"-->
+<!--                            android:layout_height="56dp"-->
+<!--                            android:background="@drawable/roundbutton"-->
+<!--                            android:digits="0123456789"-->
+<!--                            android:drawablePadding="8dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:text="Enter code"-->
+<!--                            android:textColor="@color/colorPrimaryLight" />-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </RelativeLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusTopEnd="@dimen/cardview_compat_inset_shadow"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tablenbr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Table Id"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Make order"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundbutton"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
