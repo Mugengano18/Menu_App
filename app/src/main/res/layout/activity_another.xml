@@ -20,7 +20,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
-                android:layout_marginTop="9dp"
+
                 android:id="@+id/image2"
                 android:src="@drawable/food5"/>
 
@@ -61,15 +61,17 @@
                         android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:text="Rwf"/>
+
                     <Space
                         android:layout_width="4dp"
                         android:layout_height="wrap_content"></Space>
+
                     <TextView
                         android:id="@+id/money2"
                         android:layout_width="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:text="  3000"/>
+                        android:layout_height="match_parent"
+                        android:text="  3000"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -80,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="30dp">
 
 
                 <TextView
@@ -138,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="30dp">
 
 
                 <TextView
@@ -171,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:text="Add"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_below="@id/linear"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/roundbutton"/>
@@ -179,9 +181,6 @@
 
         </LinearLayout>
 
-
     </ScrollView>
-
-
 
 </RelativeLayout>
