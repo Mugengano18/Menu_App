@@ -160,7 +160,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 final  FirebaseUser user=firebaseAuth.getCurrentUser();
                 if(user!= null){
                     Intent intent=new Intent(SignupActivity.this,Tablenbr.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 }
