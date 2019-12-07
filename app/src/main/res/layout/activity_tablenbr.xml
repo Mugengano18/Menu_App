@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/jus"
-
+    android:gravity="center"
     tools:context=".Activities.Tablenbr">
 
 
@@ -16,11 +16,17 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="WELCOME"
+        android:text="Table number"
         android:textColor="#7E0202"
         android:textSize="30dp"
         android:textStyle="bold"
         app:fontFamily="@font/armata" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/table" />
 
 <!--                <RelativeLayout-->
 <!--                    android:id="@+id/headerView"-->
@@ -77,27 +83,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="491dp"
         android:layout_marginTop="200dp"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:boxCornerRadiusTopEnd="@dimen/cardview_compat_inset_shadow">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tablenbr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Table Id"
-                android:inputType="number" />
+                android:layout_width="181dp"
+                android:layout_height="67dp"
+                android:hint="     Type Number"
+                android:inputType="number"
+                android:textColorHint="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="84dp" />
 
         <Button
             android:id="@+id/button1"
