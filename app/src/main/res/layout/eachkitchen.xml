@@ -6,10 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/Black"
     android:layout_margin="10dp">
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rv"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </LinearLayout>

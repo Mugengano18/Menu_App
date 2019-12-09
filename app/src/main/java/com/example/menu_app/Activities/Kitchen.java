@@ -25,6 +25,7 @@ RecyclerView recycler;
 
     DatabaseReference ref;
     ArrayList<KitchenR> list;
+    ArrayList<String> list3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,17 +41,23 @@ RecyclerView recycler;
         if (ref != null) {
             System.out.print("yessssss");
 
+
             ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                     if (dataSnapshot.exists()) {
                         list = new ArrayList<>();
+                        list3=new ArrayList<>();
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
                             list.add(ds.getValue(KitchenR.class));
+                            System.out.println(ds.getKey());
+                            list3.add(ds.getKey());
+
                         }
 
-                        AdapterKitchen adapter = new AdapterKitchen(Kitchen.this, list);
+
+                        AdapterKitchen adapter = new AdapterKitchen(Kitchen.this, list,list3);
                         recycler.setAdapter(adapter);
 
                     }

@@ -38,9 +38,8 @@ import java.util.ArrayList;
 
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-            System.out.println(list.get(position).getName());
-            int itemPos=position;
-            Order order=list.get(position);
+            System.out.println(list.get(position).getName()+"yo");
+            System.out.println(list.get(position));
 
             holder.id.setText(list.get(position).getName());
             holder.desc.setText(Integer.toString(list.get(position).getQuantity()));
@@ -64,14 +63,14 @@ import java.util.ArrayList;
         class MyViewHolder extends RecyclerView.ViewHolder {
             TextView id, desc;
             TextView imageView;
-            Button delete;
+
 
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
                 id = itemView.findViewById(R.id.name1);
                 desc = itemView.findViewById(R.id.quantity1);
                 imageView = itemView.findViewById(R.id.price1);
-                delete=itemView.findViewById(R.id.delete);
+
             }
 
 

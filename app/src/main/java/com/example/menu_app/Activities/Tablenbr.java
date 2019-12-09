@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.menu_app.Activities.MainActivity;
 import com.example.menu_app.R;
 import com.example.menu_app.adapter.Myadapter;
+import com.example.menu_app.models.KitchenR;
 import com.example.menu_app.models.tableNumber;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
@@ -59,6 +60,7 @@ public class Tablenbr extends AppCompatActivity implements View.OnClickListener 
             Intent intent=new Intent(this, Menulist.class);
             SharedPreferences mySharedPreferences = this.getSharedPreferences("com.example.menu_app", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = mySharedPreferences.edit();
+            KitchenR ki=new KitchenR(id);
             editor.putString("id",id);
             editor.apply();
             startActivity(intent);
