@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class AdapterKitchen extends RecyclerView.Adapter<AdapterKitchen.MyViewHolder> {
+public class  AdapterKitchen extends RecyclerView.Adapter<AdapterKitchen.MyViewHolder> {
 
     ArrayList<KitchenR> list;
     ArrayList<Order> list2;
@@ -47,11 +47,13 @@ DatabaseReference ref;
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.eachkitchen, parent, false);
 
+
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        list2 = new ArrayList<>();
         for(int i=0;i<list3.size();i++){
             ref = FirebaseDatabase.getInstance().getReference().child("order").child(list3.get(i));
 
@@ -64,21 +66,23 @@ DatabaseReference ref;
                 ref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        System.out.println("aaaaaaa");
+
 
 
                         if (dataSnapshot.exists()) {
-                            list2 = new ArrayList<>();
+
                             for (DataSnapshot ds : dataSnapshot.getChildren()) {
                                 list2.add(ds.getValue(Order.class));
 
                             }
 
 
+
                             Adapter adapter = new Adapter(mContext, list2);
                             holder.rv.setAdapter(adapter);
 
                         }
+
                     }
 
                     @Override

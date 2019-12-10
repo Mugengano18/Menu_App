@@ -22,12 +22,6 @@
         android:textStyle="bold"
         app:fontFamily="@font/armata" />
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/table" />
-
 <!--                <RelativeLayout-->
 <!--                    android:id="@+id/headerView"-->
 <!--                    android:layout_width="202dp"-->

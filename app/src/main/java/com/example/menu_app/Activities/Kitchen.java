@@ -34,6 +34,7 @@ RecyclerView recycler;
         recycler=findViewById(R.id.recycler);
         ref= FirebaseDatabase.getInstance().getReference().child("order");
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -51,14 +52,14 @@ RecyclerView recycler;
                         list3=new ArrayList<>();
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
                             list.add(ds.getValue(KitchenR.class));
-                            System.out.println(ds.getKey());
                             list3.add(ds.getKey());
 
                         }
 
-
                         AdapterKitchen adapter = new AdapterKitchen(Kitchen.this, list,list3);
+
                         recycler.setAdapter(adapter);
+
 
                     }
                 }

@@ -89,6 +89,7 @@
             <TextView
                 android:padding="10dp"
                 android:gravity="center"
+                android:id="@+id/goBack"
                 android:textColor="@android:color/white"
                 android:text="@string/app_name"
                 android:background="@color/colorPrimaryLight"

@@ -24,6 +24,7 @@ import android.widget.Button;
 import com.example.menu_app.R;
 import com.example.menu_app.adapter.Myadapter;
 import com.example.menu_app.models.Model;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,14 +37,14 @@ public class Menulist extends AppCompatActivity {
     SharedPreferences preferences;
     private FirebaseAuth Auth;
     private FirebaseAuth.AuthStateListener AuthListener;
-    Button show;
+    FloatingActionButton show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menulist);
         recyclerView=findViewById(R.id.recyclerView);
-        show=(Button)findViewById(R.id.show);
+        show=(FloatingActionButton) findViewById(R.id.show);
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

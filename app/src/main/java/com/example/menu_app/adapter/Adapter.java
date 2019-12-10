@@ -38,8 +38,7 @@ import java.util.ArrayList;
 
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-            System.out.println(list.get(position).getName()+"yo");
-            System.out.println(list.get(position));
+            System.out.println("three");
 
             holder.id.setText(list.get(position).getName());
             holder.desc.setText(Integer.toString(list.get(position).getQuantity()));
